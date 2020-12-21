@@ -1,3 +1,8 @@
+.git
+.Xil
 *.cache
 *.hw
+*.ioplanning
 *.ip_user_files
+*.sim
+vivado*
