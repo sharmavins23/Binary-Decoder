@@ -43,6 +43,9 @@ documentation, or
 -   [Mimas A7 Documentation](https://numato.com/docs/mimas-artix-7-fpga-development-board-with-ddr-sdram-and-gigabit-ethernet/):
     The official (yet partially incomplete) documentation on the Mimas A7 from
     Numatolabs.
+-   [Tcler's Wiki](https://wiki.tcl-lang.org/): A basic wiki for the TCL
+    language, the scripting language used to program `.xdc` Xilinx design
+    constraint files.
 
 # License TL;DR
 
