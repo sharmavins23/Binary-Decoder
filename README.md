@@ -18,3 +18,28 @@ The seven segments were tested using a simple Verilog design file, with the
 following RTL generated schematic:
 
 ![img](https://cdn.discordapp.com/attachments/601895458453061655/790452144741548032/unknown.png)
+
+Given this testing, we get data lines for the individual segments as follows:
+
+![img](https://cdn.discordapp.com/attachments/601895458453061655/790457249947451462/unknown.png)
+
+The corresponding data line number is shown in green.
+
+Note 1: The bitstream implementation is located in the bitstreams folder as
+`switchToLEDSegment.bit`. This bitstream file places the enable signal as
+`0001`, which is inverted from the fact that they are active-LOW signals.
+
+Note 2: On documentation, these signals are listed as an active-LOW for the
+segment display inputs as well. However, the individual DIP switches are
+unlisted as active-LOW or active-HIGH. The inputs could either be mislabelled on
+documentation, or
+
+# Helpful Links
+
+-   [Creating your first FPGA design in Vivado](https://www.youtube.com/watch?v=BBtD4PCXqlE):
+    A helpful video from
+    [FPGA Therapy](https://www.youtube.com/channel/UCC6U6pSgQ4beDi7iDhOAtEQ) on
+    creating and implementing projects in Vivado.
+-   [Mimas A7 Documentation](https://numato.com/docs/mimas-artix-7-fpga-development-board-with-ddr-sdram-and-gigabit-ethernet/):
+    The official (yet partially incomplete) documentation on the Mimas A7 from
+    Numatolabs.
