@@ -19,12 +19,13 @@ module BinaryDecoder(
     //  inputs to illustrate the individual LCD displays
 
     always @(*) begin
-        // Enable the first of four displays (active-LOW)
-        sevenSegmentEnable = 4'b1110;
+        // Set the enable signals for seven segment to input DIP switches
+        sevenSegmentEnable = value[3:0];
 
-        // Next, connect the DIP switch and the individual segment
-        sevenSegmentData = value;
-        // Also log the DIP switch value with the LEDs
-        leds = value;
+        // Enable all data lines on active low
+        sevenSegmentData = 8'b11111111;
+
+        // Enable lights with on/off position of switch
+        leds = ~value;
     end
 endmodule
