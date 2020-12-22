@@ -68,10 +68,24 @@ Given this testing, we get data lines for the individual segments as follows:
 
 The corresponding data line number is shown in green.
 
-Note: The bitstream implementation is located in the bitstreams folder as
-`switchToLEDSegment.bit`. This bitstream file places the enable signal as
-`0001`, which is incorrect due to the fact that the enable transistor signals
-are active-LOW signals.
+## DIP Switch and LED Documentation Fixes
+
+Given the following synthesized circuit:
+
+![img](https://cdn.discordapp.com/attachments/601895458453061655/790783763301793813/unknown.png)
+
+We see that the switches, in the OFF position, turn the LEDs on individually.
+Furthermore, when hooking up the DIP switches to the enable lines (as shown in
+the bitstream `switchToLEDEnable.bit`) the DIP switches are not properly
+labelled in documentation.
+
+DIP switches, when turned to the ON position, output a logic 0. When turned OFF,
+they output a logic 1. This is shown by the DIP switches 1 through 4 turning on
+the individual LED displays, indicating that the switches output an active LOW
+signal.
+
+The corresponding LEDs function similarly to documentation, and are driven via
+high voltage signals to turn on.
 
 ## Helpful Links
 

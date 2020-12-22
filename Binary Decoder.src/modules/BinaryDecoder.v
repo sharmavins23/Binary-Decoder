@@ -23,7 +23,7 @@ module BinaryDecoder(
         sevenSegmentEnable = value[3:0];
 
         // Enable all data lines on active low
-        sevenSegmentData = 8'b11111111;
+        sevenSegmentData = 8'b00000000;
 
         // Enable lights with on/off position of switch
         leds = ~value;
