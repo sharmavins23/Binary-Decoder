@@ -26,26 +26,6 @@ fills in the gaps for this documentation as necessary. All features are not
 tested and implemented here, but the main portions tested are the seven segment
 displays, eight DIP switches, and their corresponding LEDs.
 
-## Current Progress
-
-Since this project is currently in a Work In Progress state, I will document as
-I go along my progress, in order to more easily pick up work later.
-
-As of now, the bugs in the `switchToLEDSegment` module are fixed; However, their
-individual synthesis and implementation files have yet to be fully fleshed out.
-While bitstreams can be separated into their own files, the current focus is on
-fleshing out filestructure of published works such that module and data
-information is readily accessible. The current plan is to create a `src` file as
-well as a `bitstream` file, and keep respective modules within `src/modules` and
-testbench within `src/testbench`. Constraint files will be saved separately and
-individually, and commented as necessary in order to simplify project
-reconstruction on other users' ends.
-
-While the current synthesis and implementation steps for the
-`switchToLEDSegment` module have not been executed, the current plan is to go
-from there and implement the hexadecimal input to output conversion. Since there
-are four segments, the output can support up to 16-bit binary values.
-
 ## LCD Display Documentation Fixes
 
 The original documentation for the LCD output can be found
