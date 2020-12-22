@@ -26,13 +26,13 @@ fills in the gaps for this documentation as necessary. All features are not
 tested and implemented here, but the main portions tested are the seven segment
 displays, eight DIP switches, and their corresponding LEDs.
 
-## LCD Display Documentation Fixes
+## Seven Segment LED Display Documentation Fixes
 
-The original documentation for the LCD output can be found
+The original documentation for the 7 Segment LED output can be found
 [here](https://numato.com/docs/mimas-artix-7-fpga-development-board-with-ddr-sdram-and-gigabit-ethernet/#7segment-led-display-4).
 
 As seen, the original documentation is fairly incomplete, so the following
-section shall be dedicated to documenting the LCD screen functionality of the
+section shall be dedicated to documenting the 7seg screen functionality of the
 Mimas A7 Artix 7 FPGA. While not tested on revision 2 or previous versions of
 the development board, it is assumed that the other versions of the board
 function similarly to those listed in this documentation.
