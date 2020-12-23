@@ -20,7 +20,7 @@ for implementation on the FPGA as well as the core features in the design
 process of FPGA design, and is an extremely basic yet featured guide for
 starting out in FPGA development.
 
-## Clock Divider Circuit
+## Clock Divider
 
 The 7-Segment LED controller uses a clock divider to determine which segment
 should be on at any given time. Given this fact, the Clock Divider circuit is
@@ -43,6 +43,12 @@ invert the equation, and then calculate the `N` value.
 
 This parameter can instead be wired to another input in order to modulate and
 control the cycle speed.
+
+## Eight Bit Split Inverter
+
+The DIP switch input is active-LOW, so this module flips the bits before
+splitting them into two nibbles. These nibbles correspond to the individual
+hexadecimal characters.
 
 ## Helpful Links
 
