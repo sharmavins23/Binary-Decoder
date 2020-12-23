@@ -20,52 +20,24 @@ for implementation on the FPGA as well as the core features in the design
 process of FPGA design, and is an extremely basic yet featured guide for
 starting out in FPGA development.
 
-_It's also important to note that_ the documentation on Numatolabs (listed below
-in the links section) is fairly incomplete, so the following documentation also
-fills in the gaps for this documentation as necessary. All features are not
-tested and implemented here, but the main portions tested are the seven segment
-displays, eight DIP switches, and their corresponding LEDs.
+## Clock Divider Circuit
 
-## Seven Segment LED Display Documentation Fixes
+The 7-Segment LED controller uses a clock divider to determine which segment
+should be on at any given time. Given this fact, the Clock Divider circuit is
+utilized to control the clock output.
 
-The original documentation for the 7 Segment LED output can be found
-[here](https://numato.com/docs/mimas-artix-7-fpga-development-board-with-ddr-sdram-and-gigabit-ethernet/#7segment-led-display-4).
+The clock divider module has an input parameter (listed in module definition)
+which can be explicitly formed to program the period of the clock cycle output
+with the following equation:
 
-As seen, the original documentation is fairly incomplete, so the following
-section shall be dedicated to documenting the 7seg screen functionality of the
-Mimas A7 Artix 7 FPGA. While not tested on revision 2 or previous versions of
-the development board, it is assumed that the other versions of the board
-function similarly to those listed in this documentation.
+![eqn](https://latex.codecogs.com/gif.latex?T%3D%5Cfrac%7BN%7D%7B100%20MHz%7D)
 
-The seven segments were tested using a simple Verilog design file, with the
-following RTL generated schematic:
+In this equation, N is the parameter representing the number of clock cycles
+from the onboard CMOS oscillator before a circuit clock cycle occurs. Setting it
+below 1 or to a non-integer value will cause the module to malfunction.
 
-![img](https://cdn.discordapp.com/attachments/601895458453061655/790452144741548032/unknown.png)
-
-Given this testing, we get data lines for the individual segments as follows:
-
-![img](https://cdn.discordapp.com/attachments/601895458453061655/790457249947451462/unknown.png)
-
-The corresponding data line number is shown in green.
-
-## DIP Switch and LED Documentation Fixes
-
-Given the following synthesized circuit:
-
-![img](https://cdn.discordapp.com/attachments/601895458453061655/790783763301793813/unknown.png)
-
-We see that the switches, in the OFF position, turn the LEDs on individually.
-Furthermore, when hooking up the DIP switches to the enable lines (as shown in
-the bitstream `switchToLEDEnable.bit`) the DIP switches are not properly
-labelled in documentation.
-
-DIP switches, when turned to the ON position, output a logic 0. When turned OFF,
-they output a logic 1. This is shown by the DIP switches 1 through 4 turning on
-the individual LED displays, indicating that the switches output an active LOW
-signal.
-
-The corresponding LEDs function similarly to documentation, and are driven via
-high voltage signals to turn on.
+This parameter can instead be wired to another input in order to modulate and
+control the cycle speed.
 
 ## Helpful Links
 
@@ -79,6 +51,9 @@ high voltage signals to turn on.
 -   [Tcler's Wiki](https://wiki.tcl-lang.org/): A basic wiki for the TCL
     language, the scripting language used to program `.xdc` Xilinx design
     constraint files.
+-   [Revised Mimas A7 Docs](https://sharmavins23.github.io/Mimas-A7-Artix-7-Documentation/):
+    A revised version of the official documentation with more information,
+    created during the implementation of this project.
 
 # License TL;DR
 

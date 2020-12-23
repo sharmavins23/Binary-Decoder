@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="54" Path="C:/code/Binary Decoder/Binary Decoder.xpr">
+<Project Version="7" Minor="54" Path="C:/Code/Binary Decoder/Binary Decoder.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="86a5bf0329b74d5b96ba636af7c6ea7d"/>
@@ -74,8 +74,40 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PPRDIR/../../Code/Binary Decoder/Binary Decoder.src/modules/BinaryDecoder.v">
+      <File Path="$PPRDIR/Binary Decoder.src/modules/BinaryDecoder.v">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/Binary Decoder.src/modules/Mux4Bit2Input.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/Binary Decoder.src/modules/EightBitSplitInverter.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/Binary Decoder.src/modules/ClockDivider.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/Binary Decoder.src/modules/SevenSegmentController.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -111,14 +143,14 @@
       </Config>
     </FileSet>
     <FileSet Name="constraints" Type="Constrs" RelSrcDir="$PSRCDIR/constraints" RelGenDir="$PGENDIR/constraints">
-      <File Path="$PPRDIR/../../Code/Binary Decoder/Binary Decoder.src/constraints/switchToLEDSegment.xdc">
+      <File Path="$PPRDIR/Binary Decoder.src/constraints/switchToLEDSegment.xdc">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
       </File>
       <Config>
-        <Option Name="TargetConstrsFile" Val="$PPRDIR/../../Code/Binary Decoder/Binary Decoder.src/constraints/switchToLEDSegment.xdc"/>
+        <Option Name="TargetConstrsFile" Val="$PPRDIR/Binary Decoder.src/constraints/switchToLEDSegment.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
