@@ -50,6 +50,12 @@ The DIP switch input is active-LOW, so this module flips the bits before
 splitting them into two nibbles. These nibbles correspond to the individual
 hexadecimal characters.
 
+## Seven Segment Controller
+
+This controller has input nibbles as well as an internal multiplexer for the
+input nibbles. In a four-output scenario, an internal 1-cold decoder is needed
+to select the enable signal.
+
 ## Helpful Links
 
 -   [Creating your first FPGA design in Vivado](https://www.youtube.com/watch?v=BBtD4PCXqlE):
