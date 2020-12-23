@@ -30,11 +30,16 @@ The clock divider module has an input parameter (listed in module definition)
 which can be explicitly formed to program the period of the clock cycle output
 with the following equation:
 
-![eqn](https://latex.codecogs.com/gif.latex?T%3D%5Cfrac%7BN%7D%7B100%20MHz%7D)
+![eqn](https://latex2png.com/pngs/d91062df5afd323206c57b085554d572.png)
 
-In this equation, N is the parameter representing the number of clock cycles
+In this equation, `N` is the parameter representing the number of clock cycles
 from the onboard CMOS oscillator before a circuit clock cycle occurs. Setting it
-below 1 or to a non-integer value will cause the module to malfunction.
+below 1 or to a non-integer value will cause the module to malfunction. `k` is
+the multiplier parameter, which together can be used to calculate the top value.
+
+In order to calculate the desired frequency to divide to, it's recommended to
+first choose a multiplier value that evenly divides into the desired frequency,
+invert the equation, and then calculate the `N` value.
 
 This parameter can instead be wired to another input in order to modulate and
 control the cycle speed.
