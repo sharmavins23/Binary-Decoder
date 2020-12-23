@@ -19,17 +19,23 @@ module ClockDivider (
     parameter divisionCount = 1;
     parameter divisionMulti = 6;
     // Calculated division parameter
-    parameter division = divisionCount * (10 ** divisionMulti);
+    parameter division = (divisionCount * (10 ** divisionMulti)) / 2;
 
+    // Base counter input
+    initial begin
+        counterOut = 0;
+    end
+
+    // Counter creation for clock division
     always @(posedge clockIn) begin
         if (counter < division) begin
             // Set the clock output to low
-            clockOut <= 0;
+            clockOut <= clockIn;
             // Increment counter value
             counterOut <= counter + 1;
         end else begin
-            // Set the clock output to high
-            clockOut <= 1;
+            // Set the clock output to invert
+            clockOut <= ~clockIn;
             // Reset counter value
             counterOut <= 0;
         end
