@@ -3,6 +3,8 @@
 This project is the base implementation for an 8-bit binary encoder with a seven
 segment display output on the Mimas A7 Artix 7 FPGA development board.
 
+![img](https://cdn.discordapp.com/attachments/601895458453061655/791481209585926204/unknown.png)
+
 ## Overview
 
 The project takes in a binary input, which is given by the 8-bit encoded DIP
