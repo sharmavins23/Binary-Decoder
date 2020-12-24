@@ -30,7 +30,7 @@ module BinaryDecoder (
         cmosClock,
         clockFeedback,
         counter,
-        clockFeedback,
+        clockOut,
         counter
     );
     EightBitSplitInverter eightBitSplitInverter(
@@ -39,7 +39,7 @@ module BinaryDecoder (
         bottomNibble
     );
     SevenSegmentController sevenSegmentController(
-        counter,
+        clockOut,
         topNibble,
         bottomNibble,
         enableLine,
