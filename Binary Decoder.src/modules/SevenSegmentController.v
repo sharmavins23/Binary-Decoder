@@ -17,7 +17,7 @@ module SevenSegmentController (
     );
 
     // Module wiring
-    reg [3:0] dataNibble;
+    wire [3:0] dataNibble;
 
     // Module instantiation
     Mux4Bit2Input mux4Bit2Input(counter, segment2, segment1, dataNibble);

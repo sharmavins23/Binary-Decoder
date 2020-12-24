@@ -23,19 +23,13 @@ starting out in FPGA development.
 ## Clock Divider
 
 The 7-Segment LED controller uses a clock divider to determine which segment
-should be on at any given time. Given this fact, the Clock Divider circuit is
+should be on at any given time. Given this fact, the clock divider circuit is
 utilized to control the clock output.
 
-The clock divider module has an input parameter (listed in module definition)
-which can be explicitly formed to program the period of the clock cycle output
-with the following equation:
+![eqn](https://latex2png.com/pngs/9e37525874b6347c29e439bbb3901a50.png)
 
-![eqn](https://latex2png.com/pngs/d91062df5afd323206c57b085554d572.png)
-
-In this equation, `N` is the parameter representing the number of clock cycles
-from the onboard CMOS oscillator before a circuit clock cycle occurs. Setting it
-below 1 or to a non-integer value will cause the module to malfunction. `k` is
-the multiplier parameter, which together can be used to calculate the top value.
+In this equation, `N` is the width (in bits) of the counter bus which overflows
+to flip the clock cycle.
 
 In order to calculate the desired frequency to divide to, it's recommended to
 first choose a multiplier value that evenly divides into the desired frequency,
