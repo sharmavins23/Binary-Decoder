@@ -36,12 +36,12 @@ module BinaryDecoder (
     EightBitSplitInverter eightBitSplitInverter(
         dipSwitch,
         topNibble,
-        bottomNibble
+        botNibble
     );
     SevenSegmentController sevenSegmentController(
         clockOut,
         topNibble,
-        bottomNibble,
+        botNibble,
         enableLine,
         dataLine
     );

@@ -5,7 +5,6 @@
 // Description: Selects between two four bit nibbles.
 ////////////////////////////////////////////////////////////////////////////////
 
-
 module Mux4Bit2Input (
     // Inputs
     input selector,
@@ -22,6 +21,4 @@ module Mux4Bit2Input (
             nibbleOut = nibbleB; // In this case, low DIP input
         end
     end
-
-
 endmodule
