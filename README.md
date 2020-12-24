@@ -28,7 +28,7 @@ The 7-Segment LED controller uses a clock divider to determine which segment
 should be on at any given time. Given this fact, the clock divider circuit is
 utilized to control the clock output.
 
-![img](https://latex2png.com/pngs/9e37525874b6347c29e439bbb3901a50.png)
+![eqn](https://cdn.discordapp.com/attachments/385581275160903680/791481962481188864/unknown.png)
 
 In this equation, `N` is the width (in bits) of the counter bus which overflows
 to flip the clock cycle.
