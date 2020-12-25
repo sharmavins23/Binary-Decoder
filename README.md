@@ -24,6 +24,8 @@ starting out in FPGA development.
 
 ## Clock Divider
 
+![img](https://cdn.discordapp.com/attachments/385581275160903680/792140914314706964/unknown.png)
+
 The 7-Segment LED controller uses a clock divider to determine which segment
 should be on at any given time. Given this fact, the clock divider circuit is
 utilized to control the clock output.
@@ -42,11 +44,15 @@ control the cycle speed.
 
 ## Eight Bit Split Inverter
 
+![img](https://cdn.discordapp.com/attachments/385581275160903680/792141445989531658/unknown.png)
+
 The DIP switch input is active-LOW, so this module flips the bits before
 splitting them into two nibbles. These nibbles correspond to the individual
 hexadecimal characters.
 
 ## Seven Segment Controller
+
+![img](https://cdn.discordapp.com/attachments/385581275160903680/792141698875785256/unknown.png)
 
 This controller has input nibbles as well as an internal multiplexer for the
 input nibbles. In a four-output scenario, an internal 1-cold decoder is needed
